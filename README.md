@@ -91,6 +91,19 @@ Outros:Neutro Gastos inesperados (precisam de análise da IA)
 Quando o usuário registrar um gasto via chat, a IA deve automaticamente atribuir uma dessas categorias. Se a IA estiver em dúvida, ela deve perguntar: 'Isso é essencial ou um mimo para você?'.
 No Dashboard, exiba um pequeno indicador (badge) ao lado de cada transação no histórico mostrando se ela foi 'Essencial' ou 'Supérfluo', ajudando o usuário a ter consciência visual imediata de onde o dinheiro está indo."
 
+**06**
+
+"Preciso de dois ajustes urgentes no MeuBolso:
+
+Correção de Categorias: Force o sistema a classificar 'Lanchonete', 'Restaurante', 'iFood' e 'Lanche' como Supérfluo (Categoria: Lazer/Alimentação Extra), e não como Essencial/Gás. Crie um dicionário de palavras-chave para garantir que gastos com alimentação fora de casa nunca sejam confundidos com contas fixas de casa (como Gás ou Luz).
+
+Funcionalidade de Edição (CRUD): >    - No 'Histórico de Gastos', adicione um ícone de Lixeira para excluir uma transação e um ícone de Lápis para editar o valor ou a categoria caso o usuário erre a digitação.
+
+No Chat, permita que eu diga 'apague o último' ou 'corrija o valor para R$ X' e a IA deve atualizar o registro mais recente automaticamente."
+
+
+
+
 ===FIM===
 
 ![MeuBolso](assets/04.png)
