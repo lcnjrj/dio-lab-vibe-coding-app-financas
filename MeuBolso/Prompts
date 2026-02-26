@@ -1,0 +1,74 @@
+"Crie um MVP de aplicativo de finanças pessoais chamado 'MeuBolso' com foco em 'Vibe Coding' (minimalista e funcional). Use React, Tailwind CSS e Lucide React para ícones. A estrutura deve ser mobile-first com uma barra de navegação inferior contendo: 'Chat', 'Histórico' e 'Dashboard'. A tela inicial padrão deve ser a interface de Chat. Use uma paleta de cores moderna: fundo Dark Mode (Slate-900), com sotaques em azul maritimo e Branco."
+
+"Agora, detalhe a tela de Chat. Adicione uma área de mensagens com balões de conversa elegantes. O input de texto na parte inferior deve ter um botão de 'Microfone' para simular entrada de áudio. Quando eu digitar algo como 'Gastei 50 reais no mercado', simule uma resposta do 'Agente Financeiro' confirmando a categoria e atualizando um pequeno card de feedback visual que aparece dentro do próprio chat."
+
+"Agora, crie a tela de Dashboard focada em fluxo de caixa em tempo real. Ela deve conter:
+
+Card de Receitas: Um campo para 'Saldo Inicial' e uma lista de 'Entradas Adicionais' (permitindo várias entradas manuais para quem recebe por dia/freela).
+
+Resumo Financeiro: Exiba em destaque três valores: 'Total Recebido' (soma do inicial + entradas), 'Gastos até agora' (soma das despesas do chat) e o 'Saldo Restante' (calculado automaticamente).
+
+Visualização: Use uma barra de progresso horizontal que diminui conforme os gastos aumentam em relação à receita total.
+
+Dicas da IA: Mantenha a seção de cards horizontais com sugestões de economia baseadas no saldo que ainda resta para o mês.
+Use um design limpo, com fontes legíveis e cores que facilitem a distinção entre entrada (verde) e saída (vermelho).
+
+Quando um gasto for registrado com sucesso, exiba um breve feedback visual ( um ícone de check). Se o usuário adicionar uma Receita, mostre uma pequena animação de 'subida' no número do Saldo Total."
+
+==
+
+ Prompt #4 (Versão Avançada de Lógica e Empatia)
+ 
+"Implemente a lógica do 'Agente Financeiro' com foco em análise de prioridades e comportamento adaptativo:
+
+Gatilho de Alerta (22%): Sempre que o 'Saldo Restante' for menor que 22% do 'Total Recebido', o Agente deve iniciar uma conversa com o tom: 'Oi! Notei que entramos na zona de reserva (menos de 22% do saldo). Vamos tentar segurar os gastos extras até o próximo recebimento?'.
+
+Lógica de Sugestão (O Coração da IA):
+
+Cenário A (Gastos Supérfluos Detectados): Se houver registros em categorias como 'Lazer' ou 'Mimos' no histórico recente, proponha uma micro-meta de economia realística (ex: 'Que tal evitarmos gastos em Lazer nos próximos 3 dias? Isso salvaria R$ X').
+
+Cenário B (Sem Supérfluos / Renda no Fim): Se os gastos forem apenas essenciais (Aluguel, Comida, Luz), o Agente deve mudar a estratégia para Priorização: 'Vejo que seu orçamento está apertado e focado no essencial. Vamos priorizar os pagamentos mais urgentes primeiro? Foque em [Contas Vencendo Logo] e evite antecipar compras que podem esperar.'.
+
+UI de Alerta: As mensagens desse alerta devem ter uma borda sutil amarela e um fundo levemente diferenciado para destacar a importância.
+
+Gamificação e Feedback de Desafio:
+
+Inclua o botão: 'Vou tentar'.
+
+Ao clicar, crie um pequeno rastreador no Dashboard chamado 'Desafio de Economia'.
+
+Sucesso: Se o usuário chegar ao fim do período definido sem estourar o limite, exiba no chat: 'Parabéns, você conseguiu! 🏆' com confetes visuais.
+
+Falha: Se um novo gasto for registrado e estourar a meta, exiba com tom encorajador: 'Não foi dessa vez, mas na próxima eu consigo! Vamos reajustar?'."
+
+
+==
+
+
+"Configure o sistema de categorias do MeuBolso
+
+. Crie uma lista interna onde:
+
+Essenciais: 
+Habitação: Aluguel, Condomínio, Luz, Água, Gás 
+Alimentação Básica:EssencialSupermercado, Padaria, Feira
+Saúde: Farmácia, Plano de Saúde, Dentista
+Transporte: Combustível, Ônibus, Metrô, Manutenção
+Educação: Mensalidade, Cursos, Livros didáticos
+
+Supérfluos:
+Lazer / Estilo de Vida: Cinema, iFood, Restaurante, Assinaturas (Netflix/Spotify)
+Mimos / Desejos: Roupas novas, Eletrônicos, Viagens, Hobbies
+
+Outros:Neutro Gastos inesperados (precisam de análise da IA)
+
+Quando o usuário registrar um gasto via chat, a IA deve automaticamente atribuir uma dessas categorias. Se a IA estiver em dúvida, ela deve perguntar: 'Isso é essencial ou um mimo para você?'.
+No Dashboard, exiba um pequeno indicador (badge) ao lado de cada transação no histórico mostrando se ela foi 'Essencial' ou 'Supérfluo', ajudando o usuário a ter consciência visual imediata de onde o dinheiro está indo."
+
+"Preciso de dois ajustes urgentes no MeuBolso:
+
+Correção de Categorias: Force o sistema a classificar 'Lanchonete', 'Restaurante', 'iFood' e 'Lanche' como Supérfluo (Categoria: Lazer/Alimentação Extra), e não como Essencial/Gás. Crie um dicionário de palavras-chave para garantir que gastos com alimentação fora de casa nunca sejam confundidos com contas fixas de casa (como Gás ou Luz).
+
+Funcionalidade de Edição (CRUD): >    - No 'Histórico de Gastos', adicione um ícone de Lixeira para excluir uma transação e um ícone de Lápis para editar o valor ou a categoria caso o usuário erre a digitação.
+
+No Chat, permita que eu diga 'apague o último' ou 'corrija o valor para R$ X' e a IA deve atualizar o registro mais recente automaticamente."
