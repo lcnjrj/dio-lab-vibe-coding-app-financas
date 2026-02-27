@@ -100,7 +100,15 @@ Correção de Categorias: Force o sistema a classificar 'Lanchonete', 'Restauran
 Funcionalidade de Edição (CRUD): >    - No 'Histórico de Gastos', adicione um ícone de Lixeira para excluir uma transação e um ícone de Lápis para editar o valor ou a categoria caso o usuário erre a digitação.
 
 No Chat, permita que eu diga 'apague o último' ou 'corrija o valor para R$ X' e a IA deve atualizar o registro mais recente automaticamente."
+O app apresenta erros de lógica e interface que precisam ser corrigidos agora:
 
+Lógica de Soma de Rendas: O 'Total Recebido' deve ser a soma matemática do 'Saldo Inicial' + todas as 'Entradas Adicionais'. Certifique-se de que os valores sejam tratados como números (float/number) e não como strings. O Dashboard deve atualizar esse total automaticamente sempre que uma nova renda for adicionada.
+
+Ícones de Edição e Exclusão: Na lista de histórico e no card de rendas, adicione visivelmente os ícones 'Pencil' (editar) e 'Trash2' (excluir) da biblioteca lucide-react. Eles devem ser clicáveis.
+
+Funcionalidade de Edição: Ao clicar no ícone de editar, abra um pequeno modal ou transforme o campo em um input para que eu possa corrigir erros de digitação nos valores ou nomes.
+
+Persistência de Estado: Garanta que, ao excluir ou editar uma renda ou gasto, o 'Saldo Restante' e o 'Total Recebido' no Dashboard sejam recalculados instantaneamente."
 
 
 
